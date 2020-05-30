@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 #update Repository
 RUN apt-get update -y
@@ -6,16 +6,9 @@ RUN apt-get update -y
 #install Apache
 RUN apt-get install -y apache2
 
-RUN apt-get install software-properties-common
-
-#Add ondrej/php PPA
-RUN add-apt-repository ppa:ondrej/php
-
-#update Repository
-RUN apt-get update -y
-
 #instal PHP Module
-RUN apt-get install -y php7.3 php7.3-common php7.3-opcache php7.3-cli php7.3-gd php7.3-curl php7.3-mysql libapache2-mod-php7.3 php7.3-bcmath php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-readline php7.3-xml php7.3-zip
+RUN apt-get install -y php7.0 libapache2-modphp7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt php7.0-zip
+
 
 #Copy Application Files
 RUN rm -rf /var/www/html/*
