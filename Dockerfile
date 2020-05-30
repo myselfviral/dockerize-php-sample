@@ -6,8 +6,14 @@ RUN apt-get update -y
 #install Apache
 RUN apt-get install -y apache2
 
+#Add ondrej/php PPA
+RUN add-apt-repository ppa:ondrej/php
+
+#update Repository
+RUN apt-get update -y
+
 #instal PHP Module
-RUN apt-get install -y php7.3 php7.3-common php7.3-opcache php7.3-cli php7.3-gd php7.3-curl php7.3-mysql
+RUN apt-get install -y php7.3 php7.3-common php7.3-opcache php7.3-cli php7.3-gd php7.3-curl php7.3-mysql libapache2-mod-php7.3 php7.3-bcmath php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-readline php7.3-xml php7.3-zip
 
 #Copy Application Files
 RUN rm -rf /var/www/html/*
