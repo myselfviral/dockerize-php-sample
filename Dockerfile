@@ -6,6 +6,8 @@ RUN apt-get update -y
 #install Apache
 RUN apt-get install -y apache2
 
+RUN apt-get install software-properties-common
+
 #Add ondrej/php PPA
 RUN add-apt-repository ppa:ondrej/php
 
