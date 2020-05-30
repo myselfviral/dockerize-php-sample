@@ -24,4 +24,4 @@ ENV APACHE_RUN_DIR /var/log/apache2
 EXPOSE 80
 
 #start Apache Service
-CMD ["/user/sbin/apache2ctl","-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2ctl","-D", "FOREGROUND"]
