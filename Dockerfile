@@ -12,7 +12,7 @@ RUN apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php
 
 #Copy Application Files
 RUN rm -rf /var/www/html/*
-ADD dockerize-php-sample /var/www/html/*
+ADD . /var/www/html/*
 
 #configure Apache (Optional)
 RUN chown -R www-data:www-data /var/www/html/*
