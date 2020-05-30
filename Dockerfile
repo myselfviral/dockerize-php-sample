@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 #update Repository
-RUN aptget update -y
+RUN apt-get update -y
 
 #install Apache
 RUN apt-get install -y apache2
